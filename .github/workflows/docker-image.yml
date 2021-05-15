@@ -7,7 +7,7 @@ name: Build and push a docker image to AWS ECR
 env:
   aws-region: eu-west-1
   repo: elixir-images-repo
-  image_tag: ssans_elixir:latest
+  image_tag: ssans_elixir
   
 jobs:
   ecr:
