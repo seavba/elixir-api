@@ -3,7 +3,7 @@ FROM elixir
 WORKDIR /app
 
 RUN apt-get update && \
-  apt-get install -y postgresql-client postgresql postgresql-contrib
+  apt-get install -y postgresql-client
 
 RUN mix local.hex --force && mix archive.install hex phx_new --force && \
     echo y| mix phx.new beer_catalog --no-html --no-webpack --binary-id
