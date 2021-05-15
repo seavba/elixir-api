@@ -1,3 +1,3 @@
 FROM elixir
 
-RUN "mix local.hex"
+RUN mix local.hex
