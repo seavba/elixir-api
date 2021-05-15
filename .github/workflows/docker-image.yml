@@ -6,8 +6,9 @@ name: Build and push a docker image to AWS ECR
 
 env:
   aws-region: eu-west-1
-  image_tag: ssans_elixir
-  
+  image_tag: elixir-api
+  ecr_repo: elixir-images-repo
+
 jobs:
   ecr:
     name: Elixir
@@ -27,17 +28,17 @@ jobs:
     - name: Login to Amazon ECR
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
-      
+
     - name: Create ECR repo if missing
       uses: byu-oit/github-action-create-ecr-repo-if-missing@v1
       with:
-        DOCKER_REPO_NAME:  elixir-images-repo # Your repo name goes here
+        DOCKER_REPO_NAME: ${{ env.ecr_repo }}
 
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY:  elixir-images-repo
+        ECR_REPOSITORY:  ${{ env.ecr_repo }}
         IMAGE_TAG: ${{ env.image_tag }}
       run: |
         # Build a docker container and
