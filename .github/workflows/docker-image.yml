@@ -5,7 +5,7 @@ on:
 name: Build and push a docker image to AWS ECR
 
 jobs:
-  CI/CD for pusing a docker image:
+  ecr:
     name: Elixir
     runs-on: ubuntu-latest
 
