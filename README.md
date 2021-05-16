@@ -31,6 +31,8 @@ Once a push to this repo is done, a [Github Action](https://github.com/seavba/el
 
 #### <b>Repo variables</b>
 
-No vars should be modified in this repository in order to preserve the integrity related to [IAC Repo](https://github.com/seavba/iac-api)
+No vars should be modified in this repository in order to preserve the integrity related to https://github.com/seavba/iac-api)
 
 #### <b>Webgraphy</b>
+
+- [API example](https://itnext.io/building-apis-with-phoenix-framework-a7e280b7fa4a). Thanks to @diogosouza
