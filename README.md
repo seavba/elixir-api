@@ -27,11 +27,35 @@ Once a push to this repo is done, a [Github Action](https://github.com/seavba/el
   - router.ex: File where the API actions are defined
   - seeds.exs: File where some rows in the DB are inserted.
 
-<br/>
+
+## Getting Started
 
 #### <b>Repo variables</b>
 
-No vars should be modified in this repository in order to preserve the integrity related to https://github.com/seavba/iac-api)
+ECR variables must be modified in the [Github Action](https://github.com/seavba/elixir-api/blob/main/.github/workflows/docker-image.yml#L7-L10)
+
+-  aws-region: eu-west-1
+-  image_tag: elixir-api
+-  ecr_repo: elixir-images-repo
+
+> :warning: In your repsoitory, two secrets must be created:
+
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+
+<img src="./images/secrets.png" alt="RabbitMQ MGMT" />
+<br/><br/>
+
+No more vars should be modified in this repository in order to preserve the integrity related to https://github.com/seavba/iac-api)
+
+#### How to proceed</b>
+
+- Create your github repository
+- Add the AWS secrets as described above
+- Clone the repository on your local machine
+- Modify the variables as described above
+- Push the changes and wait for the Github action 
+
 
 #### <b>Webgraphy</b>
 
