@@ -17,7 +17,7 @@ Once a push to this repo is done, a [Github Action](https://github.com/seavba/el
 
 <br/>
 
-#### <u><b>Key files</b></u>
+#### <b>Key files</b>
 
 <b>Dockerfile:</b> Obviously, the image created is based on the instructions of the Dockerfile. It installs the packages and dependencies for Elixir and copy the files needed for the DB configuration.
 
@@ -29,6 +29,8 @@ Once a push to this repo is done, a [Github Action](https://github.com/seavba/el
 
 <br/>
 
-#### <u><b>Repo variables</b></u>
+#### <b>Repo variables</b>
 
 No vars should be modified in this repository in order to preserve the integrity related to [IAC Repo](https://github.com/seavba/iac-api)
+
+#### <b>Webgraphy</b>
